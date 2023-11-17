@@ -4,6 +4,6 @@ def solution(x: str):
 
 
 if __name__ == "__main__":
-    result = solution(x)
+    result = solution("x")
     print(result)
 
