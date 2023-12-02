@@ -14,7 +14,7 @@ Purely for my own learning and refreshing on data structures and algorithms. No 
 |Day|Solved|
 |---|------|
 |1|part1, part2|
-|2||
+|2|part1, part2|
 |3||
 |4||
 |5||
