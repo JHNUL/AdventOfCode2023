@@ -13,9 +13,9 @@ Purely for my own learning and refreshing on data structures and algorithms. No 
 
 |Day|Solved|
 |---|------|
-|1|part1, part2|
-|2|part1, part2|
-|3|part1, part2|
+|1|[part1, part2](/day1/README.md)|
+|2|[part1, part2](/day2/README.md)|
+|3|[part1, part2](/day3/README.md)|
 |4||
 |5||
 |6||

@@ -1,24 +1,27 @@
-def solution_part1(line: str):
+def solution_part1(n: list):
     pass
 
 
-def solution_part2(line: str):
+def solution_part2(n: list):
     pass
 
 
-def solution(path: str, part=1):
+def read_input(path: str, as_matrix=False):
+    lines = []
     with open(path) as f:
         while True:
             line = f.readline()
             if not line:
                 break
-            if part == 1:
-                res = solution_part1(line)
-            else:
-                res = solution_part2(line)
+            lines.append(line.strip())
+    if as_matrix:
+        for i, line in enumerate(lines):
+            lines[i] = [*line]
+    return lines
 
 
 if __name__ == "__main__":
-    res1 = solution("input.txt", 1)
-    res2 = solution("input.txt", 2)
+    n = read_input("input.txt")
+    res1 = solution_part1(n)
+    res2 = solution_part2(n)
     print(res1, res2)
