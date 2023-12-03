@@ -7,7 +7,7 @@ Python
 Use venv to isolate dependencies `source .venv/bin/activate`.
 
 ### Motivation
-Purely for my own learning and refreshing on data structures and algorithms. No codegolf, no emphasis on language-specific tricks for terseness. No AI usage. Some drawings and explanations.
+Purely for my own learning and refreshing on data structures and algorithms. No codegolf, no emphasis on language-specific tricks for terseness. Absolutely no AI usage. I try to include some drawings and explanations to record thoughts and ideas about the solutions.
 
 ### Solved problems
 
