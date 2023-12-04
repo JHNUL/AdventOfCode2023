@@ -8,6 +8,6 @@ There are two sets of numbers for each line in the input. We need the size of th
 
 ### Part 2
 
-Now we parse the number of matches from each card and save those in an array. After that we can iterate through the array and increase the amount of cards at each index according to the accumulated sum.
+Now we keep the amount of cards won in a new array where we can accumulate the amounts when parsing each line of the input. The final answer is the sum of the numbers in the cards array.
 
 ![part 2](day4p2.png)
