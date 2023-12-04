@@ -1,5 +1,7 @@
 # Day 4 solution
 
+https://adventofcode.com/2023/day/4
+
 ### Part 1
 
 There are two sets of numbers for each line in the input. We need the size of the intersection of these sets to count the points. Since they double on each matching number, the final value of the card is 1 << (n-1) where n is the size of the intersection, except for no matches where it is 0.
