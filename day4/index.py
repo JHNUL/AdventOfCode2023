@@ -1,9 +1,28 @@
+import re
+
 def solution_part1(n: list):
-    pass
+    s = 0
+    for line in n:
+        sets = re.sub("Card \d:", "", line.replace("  ", " ")).split("|")
+        winning = set(sets[0].strip().split(" "))
+        played = set(sets[1].strip().split(" "))
+        k = len(played.intersection(winning))
+        if k > 0:
+            s += (1 << (k-1))
+    return s
 
 
 def solution_part2(n: list):
-    pass
+    cards = [0]*len(n)
+    for i, line in enumerate(n):
+        sets = re.sub("Card \d:", "", line.replace("  ", " ")).split("|")
+        winning = set(sets[0].strip().split(" "))
+        played = set(sets[1].strip().split(" "))
+        wins = len(played.intersection(winning))
+        cards[i] += 1
+        for j in range(i+1, i+wins+1):
+            cards[j] += cards[i]
+    return sum(cards)
 
 
 def read_input(path: str, as_matrix=False):
