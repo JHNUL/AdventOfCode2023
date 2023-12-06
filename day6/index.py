@@ -1,3 +1,6 @@
+import math
+
+
 def solution_part1(n: list):
     times = n[0]
     distances = n[1]
@@ -35,6 +38,21 @@ def solution_part2(n: list):
     return ways
 
 
+def quad(a, b, c):
+    r1 = ((-1)*b+(b**2-4*a*c)**(1/2))/2*a
+    r2 = ((-1)*b-(b**2-4*a*c)**(1/2))/2*a
+    return (r1, r2)
+
+
+def solution_part2_quadratic(n: list):
+    times = n[0].replace(" ", "")
+    distances = n[1].replace(" ", "")
+    time_limit = int(times.split(":")[1])
+    distance = int(distances.split(":")[1])
+    r1, r2 = quad(-1, time_limit, (-1)*distance)
+    return abs(math.floor(r1)-math.ceil(r2))-1
+
+
 def read_input(path: str, as_matrix=False):
     lines = []
     with open(path) as f:
@@ -52,5 +70,6 @@ def read_input(path: str, as_matrix=False):
 if __name__ == "__main__":
     n = read_input("input.txt")
     res1 = solution_part1(n)
-    res2 = solution_part2(n)
+    #res2 = solution_part2(n)
+    res2 = solution_part2_quadratic(n)
     print(res1, res2)
