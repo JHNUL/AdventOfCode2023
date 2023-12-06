@@ -10,6 +10,6 @@ Iterate througn maps looking at the ranges for destinations. If destination cann
 
 ### Part 2
 
-"I didn't expect to tap out this early..."
+We can do a reversed search from the end starting from 0 and iterate upwards until we get a result that fits in any of the initial seed ranges. Here we do not need to worry about anything else than what is the lowest location number that corresponds to _any_ of the seed ranges. Let the CPU do the talking.
 
-Well gosh darn it. It seems that the solution from the first part does not really help with the second part. How does one do a search with an initial range without iterating through each number in said range... need to get back to this one!
+![part 2](day5p2.png)
