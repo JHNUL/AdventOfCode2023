@@ -1,9 +1,38 @@
 def solution_part1(n: list):
-    pass
+    times = n[0]
+    distances = n[1]
+    while "  " in times or "  " in distances:
+        times = times.replace("  ", " ")
+        distances = distances.replace("  ", " ")
+    times = [int(z) for z in times.split(":")[1].strip().split(" ")]
+    distances = [int(y) for y in distances.split(":")[1].strip().split(" ")]
+    race_results = zip(times, distances)
+    m = 1
+    for time_limit, distance in race_results:
+        ways = 0
+        for i in range(1, time_limit):
+            time_pressed = time_limit-i
+            result = time_pressed*i
+            if result > distance:
+                ways += 1
+        m *= ways
+    return m
 
 
 def solution_part2(n: list):
-    pass
+    times = n[0]
+    distances = n[1]
+    times = times.replace(" ", "")
+    distances = distances.replace(" ", "")
+    time_limit = int(times.split(":")[1])
+    distance = int(distances.split(":")[1])
+    ways = 0
+    for i in range(1, time_limit):
+        time_pressed = time_limit-i
+        result = time_pressed*i
+        if result > distance:
+            ways += 1
+    return ways
 
 
 def read_input(path: str, as_matrix=False):
