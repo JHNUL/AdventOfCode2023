@@ -1,9 +1,21 @@
+from p1Hand import Hand
+from p2Hand import HandPart2
+
+
 def solution_part1(n: list):
-    pass
+    hands = sorted([Hand(x) for x in n])
+    winnings = 0
+    for i, hand in enumerate(hands):
+        winnings += (i+1)*hand.bid
+    return winnings
 
 
 def solution_part2(n: list):
-    pass
+    hands = sorted([HandPart2(x) for x in n])
+    winnings = 0
+    for i, hand in enumerate(hands):
+        winnings += (i+1)*hand.bid
+    return winnings
 
 
 def read_input(path: str, as_matrix=False):
@@ -13,7 +25,8 @@ def read_input(path: str, as_matrix=False):
             line = f.readline()
             if not line:
                 break
-            lines.append(line.strip())
+            hand, bid = line.strip().split(" ")
+            lines.append((hand, int(bid)))
     if as_matrix:
         for i, line in enumerate(lines):
             lines[i] = [*line]
