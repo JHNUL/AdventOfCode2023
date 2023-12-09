@@ -4,7 +4,7 @@ https://adventofcode.com/2023/day/8
 
 ### Part 1
 
-The input format is straightforward to parse into an adjacency list after which navigating it in a loop from the starting node "AAA" until "ZZZ" is reached is simple. The expectation from the problem statement is that there is a path to "ZZZ", so no I skipped cycle checking.
+The input format is straightforward to parse into an adjacency list after which navigating it in a loop from the starting node "AAA" until "ZZZ" is reached is simple. The expectation from the problem statement is that there is a path to "ZZZ".
 
 
 ### Part 2
