@@ -1,14 +1,20 @@
 import math
 
-
-def solution_part1(n: list):
-    movements = n[0].strip()
+def _build_graph(lines):
     graph = {}
+    entry = set()
     for i in range(2, len(n)):
         bits = n[i].split("=")
         node = bits[0].strip()
+        if node.endswith("A"):
+            entry.add(node)
         neighbours = bits[1].replace("(", "").replace(")", "").replace(" ", "").split(",")
         graph[node] = neighbours
+    return graph, entry
+
+def solution_part1(n: list):
+    movements = n[0].strip()
+    graph, _ = _build_graph(n)
     node = "AAA"
     steps = 0
     m = 0
@@ -26,12 +32,9 @@ def _run_loop(graph, start_node, movements):
     steps = 0
     node = start_node
     targets = set()
-    loop_counter = 0
     first_encounter = 0
     while True:
         steps += 1
-        if len(targets) > 0:
-            loop_counter += 1
         if movements[m] == "R":
             node = graph[node][1]
         elif movements[m] == "L":
@@ -46,14 +49,7 @@ def _run_loop(graph, start_node, movements):
 
 def solution_part2(n: list):
     movements = n[0].strip()
-    entry = set()
-    graph = {}
-    for i in range(2, len(n)):
-        bits = n[i].split("=")
-        node = bits[0].strip()
-        if node.endswith("A"):
-            entry.add(node)
-        graph[node] = bits[1].replace("(", "").replace(")", "").replace(" ", "").split(",")
+    graph, entry = _build_graph(n)
     loop_sizes = []
     for node in entry:
         loop_sizes.append(_run_loop(graph, node, movements))
