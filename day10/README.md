@@ -1,6 +1,5 @@
 # Day 10 solution
 
-
 https://adventofcode.com/2023/day/10
 
 ### Part 1

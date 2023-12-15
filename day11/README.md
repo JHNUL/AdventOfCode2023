@@ -1,5 +1,7 @@
 # Day 11 solution
 
+https://adventofcode.com/2023/day/11
+
 ### Part 1
 
 Idea: make one iteration over the matrix, save each galaxy position such that we can identify both the coordinates of the galaxies and the row numbers $i$ and column numbers $k$ which contain no galaxies.
