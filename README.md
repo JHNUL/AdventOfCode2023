@@ -24,7 +24,7 @@ Purely for my own learning and refreshing on data structures and algorithms. No 
 |9|[part1, part2](/day9/README.md)|
 |10|[part1](/day10/README.md)|
 |11|[part1, part2](/day11/README.md)|
-|12||
+|12|[part1](/day12/README.md)|
 |13||
 |14||
 |15||
